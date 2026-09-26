@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --font-app: "Nunito", "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-app);
+  --font-mono: var(--font-app);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-app);
+}
+
+.foot-loader {
+  position: relative;
+  width: 118px;
+  height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-loader::before {
+  content: "";
+  position: absolute;
+  inset: 16px 22px 12px 22px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.foot-loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.25), transparent 65%);
+  filter: blur(20px);
+}
+
+.foot-loader {
+  animation: footSpin 4s ease-in-out infinite;
+}
+
+.foot-loader::before,
+.foot-loader::after,
+.foot-loader {
+  animation-timing-function: ease-in-out;
+}
+
+.foot-loader {
+  --foot-color: rgba(252, 211, 77, 0.9);
+}
+
+.foot-loader::after {
+  animation: glowPulse 1.5s ease-in-out infinite alternate;
+}
+
+.foot-loader {
+  position: relative;
+}
+
+.foot-loader::before {
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+.foot-loader {
+  background: transparent;
+}
+
+.foot-loader {
+  mask-image: radial-gradient(circle, black 55%, transparent 100%);
+}
+
+.foot-loader {
+  overflow: visible;
+}
+
+.foot-loader {
+  position: relative;
+}
+
+.foot-loader::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 16px;
+  height: 34px;
+  border-bottom: 4px solid rgba(252, 211, 77, 0.8);
+  border-radius: 0 0 26px 26px;
+  transform: rotate(-9deg);
+  box-shadow: 0 0 18px rgba(252, 211, 77, 0.35);
+  animation: footForm 2.2s ease-in-out infinite alternate;
+}
+
+.foot-loader::after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 28px;
+  width: 68px;
+  height: 56px;
+  border: 4px solid rgba(252, 211, 77, 0.9);
+  border-color: transparent rgba(252, 211, 77, 0.9) rgba(252, 211, 77, 0.9) transparent;
+  border-radius: 60% 40% 58% 42% / 60% 36% 64% 40%;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 18px rgba(252, 211, 77, 0.25);
+  animation: footShape 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes footShape {
+  0% {
+    transform: scale(0.72) rotate(-18deg);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(0.92) rotate(-10deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1) rotate(-6deg);
+    opacity: 1;
+  }
+}
+
+@keyframes footForm {
+  0% {
+    transform: scaleX(0.7) rotate(-16deg);
+    opacity: 0.4;
+  }
+  55% {
+    transform: scaleX(0.86) rotate(-10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(1) rotate(-7deg);
+    opacity: 1;
+  }
+}
+
+@keyframes ringPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes footSpin {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
 }
