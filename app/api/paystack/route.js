@@ -1,3 +1,6 @@
+import { connectDB } from "@/lib/db";
+import { Submission } from "@/lib/models";
+
 export async function POST(request) {
   try {
     const body = await request.json();
@@ -42,6 +45,21 @@ export async function POST(request) {
       );
     }
 
+    const normalizedMode = mode === "donation" ? "donation" : "ticket";
+
+    await connectDB();
+    await Submission.create({
+      formType: normalizedMode,
+      name: String(name).trim(),
+      email: String(email).trim(),
+      phone: String(phone).trim(),
+      mode: normalizedMode,
+      quantity: Number(quantity || 1),
+      amount: numericAmount,
+      source: "paystack_checkout",
+      status: "pending",
+    });
+
     const payload = {
       email,
       amount: Math.round(numericAmount * 100),
@@ -63,7 +81,7 @@ export async function POST(request) {
           {
             display_name: "Payment Type",
             variable_name: "payment_type",
-            value: mode === "donation" ? "Donation" : "Ticket",
+            value: normalizedMode === "donation" ? "Donation" : "Ticket",
           },
           {
             display_name: "Ticket Quantity",
@@ -94,6 +112,16 @@ export async function POST(request) {
       );
     }
 
+    await Submission.updateOne(
+      {
+        email: String(email).trim(),
+        phone: String(phone).trim(),
+        amount: numericAmount,
+        mode: normalizedMode,
+      },
+      { reference: paystackData?.data?.reference || null, status: "initialized" }
+    );
+
     return Response.json({
       authorization_url: paystackData?.data?.authorization_url,
       reference: paystackData?.data?.reference,
@@ -101,7 +129,7 @@ export async function POST(request) {
   } catch (error) {
     return Response.json(
       {
-        error: "Something went wrong while starting your payment.",
+        error: error.message || "Something went wrong while starting your payment.",
       },
       { status: 500 }
     );

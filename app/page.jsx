@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "@/components/header";
 import Hero from "@/components/Hero";
-import chim from "@/public/assets/chim.jpg"
+import chim from "@/public/assets/chim edited.png"
 
 const galleryImages = [
   "/assets/BF14.png",
@@ -18,6 +18,16 @@ export default function Home() {
   const aboutHeadingRef = useRef(null);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [missionForm, setMissionForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    localChurchNameAndAddress: "",
+    pastorName: "",
+    calling: "",
+  });
+  const [missionStatus, setMissionStatus] = useState({ type: "idle", message: "" });
+  const [isSubmittingMission, setIsSubmittingMission] = useState(false);
 
   useEffect(() => {
     const node = aboutHeadingRef.current;
@@ -50,7 +60,51 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <section id="aboutUs" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+    
+
+      <section id="aboutthemovie" className="bg-[#111111] px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">About the film</p>
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
+WHEN THE CALL DEMANDS A SACRIFICE, HOW FAR WILL YOU GO?</h2>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
+            <div className="space-y-5 text-lg text-white/75">
+             Beautiful Feet is a deeply moving story rooted in real-life experiences in the interiors of Northern Nigeria near the borders with Niger Republic. 
+
+It follows a polished young female specialist doctor who abandons prosperous city prospects in Lagos to follow God's call into the unreached interiors. It authentically portrays human frailty and divine courage—showing her confront personal fears, navigate opposition from loved ones who feel she is "wasting her life," face kidnapping threats, and struggle to stand firm in her calling. 
+
+Unapologetically bold, Beautiful Feet highlights the urgent task of reaching Muslim communities and asks the difficult question of how far we are willing to go to obey God’s calling when it means risking everything. 
+
+The film stars renowned gospel minister Nathaniel Bassey in his debut acting role along with a stellar cast.
+              <p className="border-l border-yellow-500/60 mt-4 pl-5 text-white/90 italic">
+                “She must decide how far she’s willing to go in pursuit of her calling.”
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-yellow-500">Content note</p>
+                <p className="mt-4 text-base leading-relaxed text-white/80">
+                  
+Filmed in the arid villages of the Sahel as well as the beautiful city of Lagos, the movie has strong visuals - it’s a cinematic experience
+                </p>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111111] shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                <img
+                  key={galleryImages[activeImageIndex]}
+                  src={galleryImages[activeImageIndex]}
+                  alt="Beautiful Feet visual"
+                  className="h-72 w-full object-cover transition-opacity duration-700 ease-in-out"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <section id="aboutUs" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-[1.1fr_1.9fr] md:items-start">
           <div ref={aboutHeadingRef} className="overflow-hidden">
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">About us</p>
@@ -72,57 +126,8 @@ export default function Home() {
           </div>
 
           <div className="space-y-5 text-lg text-white/75">
-            <p>
-              Beautiful Feet is produced by CAP Studios, a creative production company committed to telling powerful, culturally rooted stories with authenticity, purpose, and cinematic quality.
-            </p>
-            <p>
-              CAP Studios brings together vision, craft, and storytelling discipline to create experiences that resonate beyond the screen. From concept development to final production, the studio focuses on narratives that speak to faith, identity, resilience, and the human journey.
-            </p>
-            <p>
-              Through Beautiful Feet, CAP Studios continues its mission of delivering memorable storytelling that inspires audiences and celebrates the depth of African creativity.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="aboutthemovie" className="bg-[#111111] px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">About the film</p>
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">When a life is shaped by pain, what does it take to heal?</h2>
-
-          <div className="mt-10 grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
-            <div className="space-y-5 text-lg text-white/75">
-              <p>
-                A polished doctor abandons a life of comfort and prestige to serve a remote village in Northern Nigeria, driven by a calling that goes beyond ambition and status. What begins as a quiet act of service soon becomes a test of character as she is forced to confront the brutal realities of power, survival, and sacrifice in a place where healing is often harder than simply treating the sick.
-              </p>
-              <p>
-                As she settles into the village, she discovers that the community is locked in a tense and dangerous struggle against a corrupt local “big man” who rules through fear and manipulation, and a ruthless gang of kidnappers who prey on the vulnerable. In the middle of this storm, she must navigate treacherous politics, social pressure, and the moral cost of choosing to help those who need her most.
-              </p>
-              <p>
-                Beautiful Feet is a gripping drama about purpose, resilience, and the human cost of doing good in a broken system. It asks a difficult question: how far is one willing to go when her calling demands more than compassion—it demands courage, conviction, and sometimes, a willingness to risk everything.
-              </p>
-              <p className="border-l border-yellow-500/60 pl-5 text-white/90 italic">
-                “She must decide how far she’s willing to go in pursuit of her calling.”
-              </p>
-            </div>
-
-            <div className="space-y-5">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-yellow-500">Content note</p>
-                <p className="mt-4 text-base leading-relaxed text-white/80">
-                  The film explores themes of sacrifice, corruption, community, and the moral burden of service in the face of danger.
-                </p>
-              </div>
-
-              <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111111] shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-                <img
-                  key={galleryImages[activeImageIndex]}
-                  src={galleryImages[activeImageIndex]}
-                  alt="Beautiful Feet visual"
-                  className="h-72 w-full object-cover transition-opacity duration-700 ease-in-out"
-                />
-              </div>
-            </div>
+           Beautiful Feet is produced by CAP Studios, a creative production company committed to telling powerful, Christ-centred, culturally rooted stories with authenticity, purpose, and cinematic quality.
+Through Beautiful Feet, CAP Studios continues its mission of delivering memorable storytelling that inspires audiences and celebrates the depth of African creativity.
           </div>
         </div>
       </section>
@@ -140,7 +145,7 @@ export default function Home() {
             {
               name: "Nathaniel Bassey",
               intro: "Pastor Nathaniel Bassey, celebrated worship leader and gospel singer whose music carries spiritual depth and conviction.",
-              image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/NATHANIEL-BASSEY-afrocharts-scaled.jpg",
+              image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/nathaniel.jpg",
             },
             {
               name: "Chidinma Umeh",
@@ -153,12 +158,17 @@ export default function Home() {
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/SEUN-ADEJUMOBI.jpeg",
             },
             {
-              name: "Moromotikeitike",
+              name: "Opadele Joseph",
+              intro: "Bringing artistic direction, discipline, and strong creative instincts to the heart of the production.",
+              image: "/assets/OPADELEJOSEPH.png",
+            },
+            {
+              name: "Moromoluwatiketike Abolaji-Adeola",
               intro: "A creative contributor helping shape the production with intention, passion, and visual storytelling awareness.",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/MOROMOTIKEITIKE.png",
             },
             {
-              name: "Timmy Adesola",
+              name: "Timmy Adebola",
               intro: "Adding vibrant creative energy and technical perspective to strengthen the film’s artistic expression.",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/Timmy-Adesola-scaled.jpg",
             },
@@ -201,7 +211,7 @@ export default function Home() {
                   Partner with the mission behind the story.
                 </h3>
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-                  Your support helps bring this vision to life and empower the communities, stories, and values it represents. Every contribution helps advance a project rooted in purpose, impact, and transformation.
+                 There are still over 3 billions people in the world who have not heard the Gospel. Let’s change that! We want to use Beautiful Feet to raise funds for frontier missionaries. <b className="text-white italic "> 50% of all incomes and gifts to this project will be sent to a missionary in the field among the unreached.</b> And we will send you the names of the missionaries your gift is supporting if you want to pray for them. Give now to help us reach the remaining unreached peoples of Africa and beyond.
                 </p>
                 <p className="mt-8 text-yellow-400">50% of ticket sales are used to fund missions</p>
               </div>
@@ -237,7 +247,7 @@ export default function Home() {
                 </div>
 
                 <a
-                  href="/payments"
+                  href="/donate"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-[10px] text-center bg-yellow-500 px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#111111] transition hover:bg-yellow-400"
                 >
                   Support the mission
@@ -248,11 +258,168 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-[#111111] px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl rounded-[2rem] border border-yellow-500/20 bg-[#171717] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:p-8 lg:p-10">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">Go for missions</p>
+            <h3 className="text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
+              DO YOU FEEL THE MISSIONARY CALL?
+            </h3>
+            <p className="mt-4 text-lg italic text-yellow-300">
+              “The harvest truly is plenteous, but the labourers are few;”
+            </p>
+            <p className="mt-2 text-sm font-medium uppercase tracking-[0.25em] text-white/70">
+              — Matthew 9:37 (KJV)
+            </p>
+            <p className="mt-6 text-base leading-relaxed text-white/75 sm:text-lg">
+              Complete the form below if you feel God calling you to go as a missionary either long term or short term. We will connect you with mission agencies to help you fulfill God’s calling.
+            </p>
+          </div>
+
+          <form
+            onSubmit={async (event) => {
+              event.preventDefault();
+              setMissionStatus({ type: "idle", message: "" });
+
+              const requiredFields = [
+                "name",
+                "email",
+                "phone",
+                "localChurchNameAndAddress",
+                "pastorName",
+                "calling",
+              ];
+
+              const hasEmptyField = requiredFields.some((field) => !String(missionForm[field]).trim());
+              if (hasEmptyField) {
+                setMissionStatus({ type: "error", message: "Please complete all fields before submitting." });
+                return;
+              }
+
+              setIsSubmittingMission(true);
+
+              try {
+                const response = await fetch("/api/mission", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(missionForm),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                  throw new Error(data.error || "Unable to submit the form.");
+                }
+
+                setMissionForm({
+                  name: "",
+                  email: "",
+                  phone: "",
+                  localChurchNameAndAddress: "",
+                  pastorName: "",
+                  calling: "",
+                });
+                setMissionStatus({ type: "success", message: "Your response has been submitted successfully." });
+              } catch (error) {
+                setMissionStatus({ type: "error", message: error.message || "Something went wrong while submitting." });
+              } finally {
+                setIsSubmittingMission(false);
+              }
+            }}
+            className="grid gap-4 md:grid-cols-2"
+          >
+            <div>
+              <label className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-white/70">Name</label>
+              <input
+                type="text"
+                value={missionForm.name}
+                onChange={(event) => setMissionForm((prev) => ({ ...prev, name: event.target.value }))}
+                placeholder="Your full name"
+                className="w-full rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/35 focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-white/70">Email</label>
+              <input
+                type="email"
+                value={missionForm.email}
+                onChange={(event) => setMissionForm((prev) => ({ ...prev, email: event.target.value }))}
+                placeholder="Your email address"
+                className="w-full rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/35 focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-white/70">Phone</label>
+              <input
+                type="tel"
+                value={missionForm.phone}
+                onChange={(event) => setMissionForm((prev) => ({ ...prev, phone: event.target.value }))}
+                placeholder="Your phone number"
+                className="w-full rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/35 focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-white/70">Local church name and address</label>
+              <input
+                type="text"
+                value={missionForm.localChurchNameAndAddress}
+                onChange={(event) => setMissionForm((prev) => ({ ...prev, localChurchNameAndAddress: event.target.value }))}
+                placeholder="Church name and address"
+                className="w-full rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/35 focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
+
+            <div className="md:col-span-2">
+              <label className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-white/70">Your pastor</label>
+              <input
+                type="text"
+                value={missionForm.pastorName}
+                onChange={(event) => setMissionForm((prev) => ({ ...prev, pastorName: event.target.value }))}
+                placeholder="Pastor's name"
+                className="w-full rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/35 focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
+
+            <div className="md:col-span-2">
+              <label className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-white/70">What do you sense God is calling you to do?</label>
+              <textarea
+                rows="5"
+                value={missionForm.calling}
+                onChange={(event) => setMissionForm((prev) => ({ ...prev, calling: event.target.value }))}
+                placeholder="Share how you feel God is leading you."
+                className="w-full rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/35 focus:border-yellow-500 focus:outline-none"
+              />
+            </div>
+
+            {missionStatus.message ? (
+              <div className={`md:col-span-2 rounded-xl border px-4 py-3 text-sm ${missionStatus.type === "success" ? "border-green-500/30 bg-green-500/10 text-green-200" : "border-red-500/30 bg-red-500/10 text-red-200"}`}>
+                {missionStatus.message}
+              </div>
+            ) : null}
+
+            <div className="md:col-span-2">
+              <button
+                type="submit"
+                disabled={isSubmittingMission}
+                className="inline-flex items-center justify-center rounded-[10px] bg-yellow-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#111111] transition hover:bg-yellow-400 disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {isSubmittingMission ? "Submitting..." : "Submit my response"}
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       <section className="bg-[#111111] px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#171717] shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
             <img
-              src="https://beautifulfeetmovie.com/wp-content/uploads/2026/07/IMG-20260309-WA0061.jpg"
+              src="https://beautifulfeetmovie.com/wp-content/uploads/2026/09/chim-edited.png"
               alt="Chim Onyebilanma"
               className="h-[28rem] w-full object-cover object-center"
             />
@@ -264,7 +431,9 @@ export default function Home() {
 
             <div className="mt-5 space-y-4 text-lg text-white/75">
               <p>
-                Chim Onyebilanma is the host of <span className="font-semibold text-white">Chim’s Talk Africa</span>, a weekly television and radio platform created to help Christians across Africa engage current issues through a biblical, Christ-centered lens.
+              Chim Onyebilanma is an award-winning filmmaker, director, and producer of TREASURE HUNT, which premiered at the Oscar-qualifying American Black Film Festival in Miami and screened in South African cinemas in 2025.
+A veteran missionary dedicated to reaching unreached peoples across Africa and beyond, Chim served as a leader with CAPRO for over 30 years.
+This story is deeply personal, drawing from real-life experiences he and his team have faced over the past three decades.
               </p>
               <p>
                 A visionary producer, missionary, and media host, Chim is married to Ibi Onyebilanma, and together they have carried a long-running passion to see the vision of this platform come to life. After abandoning a career in engineering in 1995, he devoted himself to full-time cross-cultural missions and leadership with CAPRO Missions, with a strong focus on evangelism and social transformation across Africa.

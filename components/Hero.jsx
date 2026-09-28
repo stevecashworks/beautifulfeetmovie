@@ -122,11 +122,11 @@ const Hero = () => {
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl text-left">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.45em] text-yellow-400/90">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.45em] text-white">
             A cinematic journey
           </p>
           <h1 className="text-4xl font-black uppercase leading-[0.9] tracking-tight sm:text-5xl lg:text-7xl">
-            <div className="block text-white">
+            <div className="block text-yellow-400">
               {typedText.split(" ")[0] || "Beautiful"}
             </div>
             <div className="block text-yellow-400">
@@ -171,7 +171,7 @@ const Hero = () => {
               Get Tickets
             </a>
             <a
-              href="#missions"
+              href="/donate"
               className="rounded-[10px] border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/10"
             >
               Give to missions

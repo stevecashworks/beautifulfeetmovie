@@ -49,9 +49,16 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden items-center md:flex">
+          <div className="hidden items-center gap-3 md:flex">
             <Link
-              href="payments"
+              href="/donate"
+              className="inline-flex items-center gap-2 border border-yellow-500/40 bg-yellow-500/10 px-4 py-2.5 text-sm font-semibold text-yellow-300 transition hover:bg-yellow-500/20"
+            >
+              Give to missions
+            </Link>
+
+            <Link
+              href="/payments"
               className="inline-flex items-center gap-2 bg-yellow-500 px-5 py-2.5 text-sm font-semibold text-[#111111] transition hover:bg-yellow-400"
             >
               Get Tickets
@@ -85,9 +92,17 @@ const Header = () => {
               ))}
 
               <Link
-                href="#tickets"
+                href="/donate"
                 onClick={() => setMenuOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 bg-yellow-500 px-4 py-2.5 font-semibold text-[#111111]"
+                className="mt-2 inline-flex items-center justify-center gap-2 border border-yellow-500/40 bg-yellow-500/10 px-4 py-2.5 font-semibold text-yellow-300"
+              >
+                Donate
+              </Link>
+
+              <Link
+                href="/payments"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center justify-center gap-2 bg-yellow-500 px-4 py-2.5 font-semibold text-[#111111]"
               >
                 Get Tickets
                 <LuTicket size={18} />
