@@ -12,6 +12,7 @@ const links = [
   { label: "About us", path: "#aboutUs" },
   { label: "About The Movie", path: "#aboutthemovie" },
   { label: "Cast", path: "#cast" },
+  { label: "BTS", path: "/bts" },
 ];
 
 const Header = () => {

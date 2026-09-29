@@ -133,12 +133,12 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
       </section>
 
       <section id="cast" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-        <p className="mb-6 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">The crew</p>
+        <p className="mb-6 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">The Cast</p>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {[
             {
-              name: "Toke Morgan",
+              name: "Tuke Morgan",
               intro: "A creative force behind the project, bringing vision, energy, and cultural perspective to the story.",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/Tuke-Morgan-2.jpeg",
             },
@@ -160,7 +160,7 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
             {
               name: "Opadele Joseph",
               intro: "Bringing artistic direction, discipline, and strong creative instincts to the heart of the production.",
-              image: "/assets/OPADELEJOSEPH.png",
+              image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/opadelejoseph.jpeg",
             },
             {
               name: "Moromoluwatiketike Abolaji-Adeola",
@@ -170,7 +170,7 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
             {
               name: "Timmy Adebola",
               intro: "Adding vibrant creative energy and technical perspective to strengthen the film’s artistic expression.",
-              image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/Timmy-Adesola-scaled.jpg",
+              image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/tmmy-adebola.jpeg",
             },
            
           ].map((person) => (
@@ -435,12 +435,7 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
 A veteran missionary dedicated to reaching unreached peoples across Africa and beyond, Chim served as a leader with CAPRO for over 30 years.
 This story is deeply personal, drawing from real-life experiences he and his team have faced over the past three decades.
               </p>
-              <p>
-                A visionary producer, missionary, and media host, Chim is married to Ibi Onyebilanma, and together they have carried a long-running passion to see the vision of this platform come to life. After abandoning a career in engineering in 1995, he devoted himself to full-time cross-cultural missions and leadership with CAPRO Missions, with a strong focus on evangelism and social transformation across Africa.
-              </p>
-              <p>
-                Through his teaching, commentary, and media work, Chim brings a rare blend of faith, leadership, and Pan-African awareness to conversations about nation-building, mission, and the role of the Church in shaping the future of the continent.
-              </p>
+            
             </div>
           </div>
         </div>
