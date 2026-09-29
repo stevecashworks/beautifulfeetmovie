@@ -2,17 +2,21 @@
 
 import { useMemo, useState } from "react";
 
-const TICKET_PRICE = 2500;
+const TICKET_PRICE = 10000;
 
 export default function PaymentsPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState("1");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
 
-  const totalAmount = useMemo(() => TICKET_PRICE * Number(quantity || 1), [quantity]);
+  const totalAmount = useMemo(() => {
+    const parsedQuantity = Number(quantity);
+    const safeQuantity = Number.isInteger(parsedQuantity) && parsedQuantity >= 1 ? parsedQuantity : 1;
+    return TICKET_PRICE * safeQuantity;
+  }, [quantity]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -23,8 +27,9 @@ export default function PaymentsPage() {
       return;
     }
 
-    if (Number(quantity) < 1) {
-      setError("Please select at least one ticket.");
+    const parsedQuantity = Number(quantity);
+    if (!Number.isInteger(parsedQuantity) || parsedQuantity < 1) {
+      setError("Please select at least one whole ticket.");
       return;
     }
 
@@ -41,7 +46,7 @@ export default function PaymentsPage() {
           email: email.trim(),
           phone: phone.trim(),
           mode: "ticket",
-          quantity: Number(quantity || 1),
+          quantity: parsedQuantity,
           amount: totalAmount,
         }),
       });
@@ -147,8 +152,16 @@ export default function PaymentsPage() {
                 <input
                   type="number"
                   min="1"
+                  step="1"
+                  required
                   value={quantity}
-                  onChange={(event) => setQuantity(Math.max(1, Number(event.target.value || 1)))}
+                  onChange={(event) => setQuantity(event.target.value)}
+                  onBlur={() => {
+                    const parsedQuantity = Number(quantity);
+                    if (!Number.isInteger(parsedQuantity) || parsedQuantity < 1) {
+                      setQuantity("1");
+                    }
+                  }}
                   className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-white focus:border-yellow-400 focus:outline-none"
                 />
                 <p className="mt-2 text-xs uppercase tracking-[0.2em] text-white/50">

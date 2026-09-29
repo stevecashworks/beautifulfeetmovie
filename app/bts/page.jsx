@@ -117,24 +117,48 @@ export default function BtsPage() {
               <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-yellow-500">
                 <span className="h-px w-8 bg-yellow-500" /> Production journal
               </p>
-              <h1 className="text-5xl font-black uppercase leading-[0.94] text-white sm:text-6xl lg:text-8xl">
-                Behind
+              <h1 className="text-4xl font-black uppercase leading-[0.96] text-white sm:text-6xl lg:text-7xl">
+                The Journey
                 <br />
-                <span className="text-yellow-400">the frame.</span>
+                <span className="text-yellow-400">Behind Beautiful Feet</span>
               </h1>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-yellow-300 sm:text-sm">
+                A 30-Year Vision
+              </p>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
-                Between takes, behind the lens, and alongside the crew bringing Beautiful Feet to life.
+                Birthed in 1996 while writer/director Chim Onyebilanma was serving as a missionary in Northern Nigeria,
+                <em> Beautiful Feet</em> is inspired by the gripping real-life stories of pioneer missionaries. The movie’s
+                journey is further blessed by the gracious partnership of Pastor Nathaniel Bassey.
               </p>
             </div>
 
             <a
-              href="#stills"
+              href="#journey"
               className="group inline-flex w-fit items-center gap-3 border-b border-yellow-500/50 pb-3 text-xs font-semibold uppercase tracking-[0.25em] text-yellow-300 transition hover:border-yellow-300"
             >
-              Explore the set
+              Read the journey
               <FiArrowDown className="transition-transform group-hover:translate-y-1" aria-hidden="true" />
             </a>
           </div>
+        </div>
+      </section>
+
+      <section id="journey" aria-labelledby="faith-title" className="border-b border-white/10 bg-[#111111] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-4xl space-y-6 text-sm leading-7 text-white/65 sm:text-base sm:leading-8">
+          <div className="border-l border-yellow-500/60 pl-5 sm:pl-7">
+            <h2 id="faith-title" className="mb-3 text-lg font-bold uppercase tracking-wide text-white sm:text-xl">Faith Through Fire</h2>
+              <p>
+                To authentically capture the Northern landscape amid regional insecurity, the team filmed in the Sahel
+                region of Northern Togo. Production faced extreme trials when local military mistook a controlled
+                burning-hut scene for a security threat, resulting in the cast and crew being detained for three days.
+              </p>
+          </div>
+
+          <p>
+            Emerging with deeper faith and supernatural unity, the team finished filming in record time.
+            <em> Beautiful Feet</em> is a testimony of resilience, faith, and a crew dedicated to sharing this story
+            with the world.
+          </p>
         </div>
       </section>
 
