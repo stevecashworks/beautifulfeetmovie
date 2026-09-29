@@ -77,6 +77,14 @@ It follows a polished young female specialist doctor who abandons prosperous cit
 Unapologetically bold, Beautiful Feet highlights the urgent task of reaching Muslim communities and asks the difficult question of how far we are willing to go to obey God’s calling when it means risking everything. 
 
 The film stars renowned gospel minister Nathaniel Bassey in his debut acting role along with a stellar cast.
+<br/>
+<br/>
+The Journey Behind Beautiful Feet
+A 30-Year Vision
+Birthed in 1996 while writer/director Chim Onyebilanma was serving as a missionary in Northern Nigeria, Beautiful Feet is inspired by the gripping real-life stories of pioneer missionaries. The movie’s journey is further blessed by the gracious partnership of Pastor Nathaniel Bassey.
+Faith Through Fire
+To authentically capture the Northern landscape amid regional insecurity, the team filmed in the Sahel region of Northern Togo. Production faced extreme trials when local military mistook a controlled burning-hut scene for a security threat, resulting in the cast and crew being detained for three days.
+Emerging with deeper faith and supernatural unity, the team finished filming in record time. Beautiful Feet is a testimony of resilience, faith, and a crew dedicated to sharing this story with the world.
               <p className="border-l border-yellow-500/60 mt-4 pl-5 text-white/90 italic">
                 “She must decide how far she’s willing to go in pursuit of her calling.”
               </p>
