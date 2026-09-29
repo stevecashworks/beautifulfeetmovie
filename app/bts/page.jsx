@@ -245,13 +245,6 @@ export default function BtsPage() {
         </div>
       </section>
 
-      <footer className="px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-white/40">
-          <span>Beautiful Feet <span className="px-2 text-yellow-500">/</span> Production journal</span>
-          <Link href="/" className="transition hover:text-yellow-300">Return to the film</Link>
-        </div>
-      </footer>
-
       {activeIndex !== null ? (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm sm:p-8"

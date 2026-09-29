@@ -155,7 +155,7 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/CHIDINMA-UMEH.jpeg",
             },
             {name:"Kate Adepegba",
-              image:"/assets/kate adepegba.jpeg",
+              image:"/assets/Kate adepegba.jpeg",
 intro:"Actor and television veteran; known for The Figurine and Slum King."},
             {
               name: "Seun Adejumobi",

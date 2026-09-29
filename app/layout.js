@@ -1,4 +1,5 @@
 import "./globals.css";
+import Footer from "@/components/footer";
 
 export const metadata = {
   title: "Beautiful Feet",
@@ -16,7 +17,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -134,7 +134,7 @@ const Hero = () => {
             </div>
           </h1>
           <p className="mt-5 max-w-lg text-base text-white/80 sm:text-lg">
-            {isReleased ? "Out now — available to watch now." : "Coming Soon To Theaters Across West Africa — February 19, 2027, stay tuned!"}
+            {isReleased ? "Out now — available to watch now." : "In cinemas from February 19th, 2027. Stay tuned"}
           </p>
 
           {!isReleased && (
