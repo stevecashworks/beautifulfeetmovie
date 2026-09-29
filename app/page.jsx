@@ -139,37 +139,40 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
           {[
             {
               name: "Tuke Morgan",
-              intro: "A creative force behind the project, bringing vision, energy, and cultural perspective to the story.",
+              intro: `Actor, professional saxophonist, content creator and lifestyle blogger; known for her debut single "Trust" and notable live performances including TEDxGbagada. She stars in the web series The Wives (2025)`,
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/Tuke-Morgan-2.jpeg",
             },
             {
               name: "Nathaniel Bassey",
-              intro: "Pastor Nathaniel Bassey, celebrated worship leader and gospel singer whose music carries spiritual depth and conviction.",
+              intro: " Pastor Nathaniel Bassey, is the globally celebrated worship leader and gospel singer whose music carries spiritual depth and conviction. This is his debut acting in any film",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/nathaniel.jpg",
             },
             {
               name: "Chidinma Umeh",
-              intro: "A committed creative and storyteller known for her eye for detail, performance, and production excellence.",
+              intro: "ctor, creative performer and journalist. Beyond her screen appearances, she is recognized for her creative talents, storytelling, and contribution to digital and performance art.",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/CHIDINMA-UMEH.jpeg",
             },
+            {name:"Kate Adepegba",
+              image:"/assets/kate adepegba.jpeg",
+intro:"Actor and television veteran; known for The Figurine and Slum King."},
             {
               name: "Seun Adejumobi",
-              intro: "Bringing artistic direction, discipline, and strong creative instincts to the heart of the production.",
+              intro: "Actor and filmmaker.. Famous for portraying Mike Bamiloye in Mount Zion’s hit The Train , his movie credits also include Abattoir, Exposed, Dark Corner, DNA, Wait, and Indelible",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/SEUN-ADEJUMOBI.jpeg",
             },
             {
               name: "Opadele Joseph",
-              intro: "Bringing artistic direction, discipline, and strong creative instincts to the heart of the production.",
+              intro: "Accomplished actor and filmmaker; known for Land of Fury (2018) and various films.",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/opadelejoseph.jpeg",
             },
             {
               name: "Moromoluwatiketike Abolaji-Adeola",
-              intro: "A creative contributor helping shape the production with intention, passion, and visual storytelling awareness.",
+              intro: " Actor, voice artist, event compere, and Christian content creator. Known for her engaging digital storytelling and screen performances. Her film credits include: The Corridor, The JAR, 30 Pieces",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/MOROMOTIKEITIKE.png",
             },
             {
               name: "Timmy Adebola",
-              intro: "Adding vibrant creative energy and technical perspective to strengthen the film’s artistic expression.",
+              intro: "Actor and creative professional. He is best known for his roles in notable screen productions, including  She Builds, ROT and Holy Scamtrimony",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/tmmy-adebola.jpeg",
             },
            
@@ -208,7 +211,7 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
               <div>
                 <p className="mb-3 text-sm font-medium uppercase tracking-[0.35em] text-yellow-500">Give to missions</p>
                 <h3 className="text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
-                  Partner with the mission behind the story.
+                  WATCH THE MOVIE, SEND A MISSIONARY
                 </h3>
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
                  There are still over 3 billions people in the world who have not heard the Gospel. Let’s change that! We want to use Beautiful Feet to raise funds for frontier missionaries. <b className="text-white italic "> 50% of all incomes and gifts to this project will be sent to a missionary in the field among the unreached.</b> And we will send you the names of the missionaries your gift is supporting if you want to pray for them. Give now to help us reach the remaining unreached peoples of Africa and beyond.
