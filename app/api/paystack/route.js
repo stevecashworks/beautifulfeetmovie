@@ -9,6 +9,7 @@ export async function POST(request) {
       email,
       phone,
       mode,
+      connectToMissionary = false,
       quantity = 1,
       amount,
     } = body || {};
@@ -46,6 +47,7 @@ export async function POST(request) {
     }
 
     const normalizedMode = mode === "donation" ? "donation" : "ticket";
+    const missionaryConnectionRequested = normalizedMode === "donation" && connectToMissionary === true;
 
     await connectDB();
     await Submission.create({
@@ -58,6 +60,7 @@ export async function POST(request) {
       amount: numericAmount,
       source: "paystack_checkout",
       status: "pending",
+      metadata: { connectToMissionary: missionaryConnectionRequested },
     });
 
     const payload = {
@@ -87,6 +90,11 @@ export async function POST(request) {
             display_name: "Ticket Quantity",
             variable_name: "ticket_quantity",
             value: String(quantity || 1),
+          },
+          {
+            display_name: "Missionary Connection Requested",
+            variable_name: "connect_to_missionary",
+            value: missionaryConnectionRequested ? "Yes" : "No",
           },
         ],
       },

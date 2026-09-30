@@ -204,7 +204,15 @@ export default function AdminPage() {
                     <td className="px-4 py-4 break-all">{item.email || "—"}</td>
                     <td className="px-4 py-4">{item.phone || "—"}</td>
                     <td className="px-4 py-4">
-                      {item.localChurchNameAndAddress ? (
+                      {item.formType === "bulk_booking" ? (
+                        <div className="space-y-1">
+                          {item.pastorName ? <div><span className="font-semibold text-white">Pastor:</span> {item.pastorName}</div> : null}
+                          {item.churchAddress ? <div><span className="font-semibold text-white">Address:</span> {item.churchAddress}</div> : null}
+                          {item.quantity ? <div><span className="font-semibold text-white">Seats:</span> {item.quantity}</div> : null}
+                          {item.bookingDate ? <div><span className="font-semibold text-white">Preferred date:</span> {item.bookingDate}</div> : null}
+                          {item.preferredCinema ? <div><span className="font-semibold text-white">Preferred cinema:</span> {item.preferredCinema}</div> : null}
+                        </div>
+                      ) : item.localChurchNameAndAddress ? (
                         <div className="space-y-1">
                           <div><span className="font-semibold text-white">Church:</span> {item.localChurchNameAndAddress}</div>
                           {item.pastorName ? <div><span className="font-semibold text-white">Pastor:</span> {item.pastorName}</div> : null}
@@ -217,6 +225,7 @@ export default function AdminPage() {
                           {item.mode ? <div><span className="font-semibold text-white">Mode:</span> {item.mode}</div> : null}
                           {item.amount ? <div><span className="font-semibold text-white">Amount:</span> NGN {Number(item.amount).toLocaleString()}</div> : null}
                           {item.quantity ? <div><span className="font-semibold text-white">Tickets:</span> {item.quantity}</div> : null}
+                          {item.mode === "donation" && item.metadata?.connectToMissionary ? <div><span className="font-semibold text-white">Missionary connection:</span> Requested</div> : null}
                           {item.reference ? <div><span className="font-semibold text-white">Ref:</span> {item.reference}</div> : null}
                         </div>
                       )}
