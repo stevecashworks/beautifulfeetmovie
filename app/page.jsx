@@ -141,7 +141,7 @@ Through Beautiful Feet, CAP Studios continues its mission of delivering memorabl
           {[
             {
               name: "Tuke Morgan",
-              intro: `Actor, professional saxophonist, content creator and lifestyle blogger; known for her debut single "Trust" and notable live performances including TEDxGbagada. She stars in the web series The Wives (2025)`,
+              intro: `Actor, Saxophonist, Photgrapher & Content Creator. Known for Live Music Performances as a Solo Artist or with her Talented Band at Birthday Parties, Weddings, Corporate Events & Social Functions like TEDxGbagada. She stars in web series The Wives (2025) & Visa on Arrival (2025)`,
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/08/Tuke-Morgan-2.jpeg",
             },
             {

@@ -176,6 +176,14 @@ const Hero = () => {
             >
               Give to missions
             </a>
+            <a
+              href="https://youtu.be/nL9Qhy6fWB8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-[10px] border border-yellow-400/60 px-6 py-3 text-sm font-semibold text-yellow-300 transition hover:bg-yellow-400/10"
+            >
+              Watch Trailer
+            </a>
           </div>
         </div>
       </div>
