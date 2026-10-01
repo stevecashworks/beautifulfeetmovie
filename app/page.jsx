@@ -216,7 +216,7 @@ intro:"Actor and television veteran; known for The Figurine and Slum King."},
                   WATCH THE MOVIE, SEND A MISSIONARY
                 </h3>
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-                 There are still over 3 billions people in the world who have not heard the Gospel. Let’s change that! We want to use Beautiful Feet to raise funds for frontier missionaries. <b className="text-white italic "> 50% of all incomes and gifts to this project will be sent to a missionary in the field among the unreached.</b> And we will send you the names of the missionaries your gift is supporting if you want to pray for them. Give now to help us reach the remaining unreached peoples of Africa and beyond.
+                 There are still over 3 billion people in the world who have not heard the Gospel. Let’s change that! We want to use Beautiful Feet to raise funds for frontier missionaries. <b className="text-white italic "> 50% of all incomes and gifts to this project will be sent to a missionary in the field among the unreached.</b> And we will send you the names of the missionaries your gift is supporting if you want to pray for them. Give now to help us reach the remaining unreached peoples of Africa and beyond.
                 </p>
                 <p className="mt-8 text-yellow-400">50% of ticket sales are used to fund missions</p>
               </div>
