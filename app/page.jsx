@@ -164,7 +164,7 @@ intro:"Actor and television veteran; known for The Figurine and Slum King."},
             },
             {
               name: "Opadele Joseph",
-              intro: "Accomplished actor and filmmaker; known for Land of Fury (2018) and various films.",
+              intro: "Actor, filmmaker, drama minister, and theatre practitioner with over two decades of experience in stage performance, teaching, and film production. His notable film and stage credits include Land of Fury, Shackles, Tales of Sharon, and The Plan.",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/opadelejoseph.jpeg",
             },
             {
