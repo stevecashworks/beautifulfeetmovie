@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import SocialLinks from "@/components/social-links";
+
 const footerLinks = [
   { label: "About us", href: "/#aboutUs" },
   { label: "The movie", href: "/#aboutthemovie" },
@@ -27,13 +29,17 @@ export default function Footer() {
             Beautiful Feet <span className="text-yellow-400">/</span> CAP Studios
           </Link>
 
-          <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/60">
-            {footerLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="transition hover:text-yellow-300">
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex flex-col items-start gap-4 sm:items-end">
+            <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/60 sm:justify-end">
+              {footerLinks.map((link) => (
+                <Link key={link.label} href={link.href} className="transition hover:text-yellow-300">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+            <SocialLinks className="flex items-center gap-2" />
+          </div>
         </div>
 
         <p className="mt-6 border-t border-white/10 pt-5 text-xs text-white/40">

@@ -164,9 +164,9 @@ intro:"Actor and television veteran; known for The Figurine and Slum King."},
             },
             {
               name: "Opadele Joseph",
-              intro: "Actor, filmmaker, drama minister, and theatre practitioner with over two decades of experience in stage performance, teaching, and film production. His notable film and stage credits include Land of Fury, Shackles, Tales of Sharon, and The Plan.",
+              intro: "Actor, filmmaker, drama minister, and theatre practitioner with over two decades of experience in stage performance, teaching, and film production. His notable film and stage credits include Land of Fury, Shackles, Tales of Sharon, and The Plan",
               image: "https://beautifulfeetmovie.com/wp-content/uploads/2026/09/opadelejoseph.jpeg",
-            },
+           },
             {
               name: "Moromoluwatiketike Abolaji-Adeola",
               intro: " Actor, voice artist, event compere, and Christian content creator. Known for her engaging digital storytelling and screen performances. Her film credits include: The Corridor, The JAR, 30 Pieces",

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { LuTicket } from "react-icons/lu";
 
+import SocialLinks from "@/components/social-links";
 import logo from "@/public/assets/beautiful feet logo resized.jpg";
 
 const links = [
@@ -77,6 +78,8 @@ const Header = () => {
             {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
         </div>
+
+        <SocialLinks className="flex items-center justify-end gap-2 pb-2" />
 
         {menuOpen && (
           <div className="mt-3 border border-white/10 bg-black/65 p-4 shadow-[0_30px_70px_rgba(0,0,0,0.6)] backdrop-blur-xl md:hidden">
